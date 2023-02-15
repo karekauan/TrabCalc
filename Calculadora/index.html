@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt--br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css"> <!-- importa o arquivo de estilo CSS -->
+    <script src="script.js" defer></script> <!-- importa o arquivo JavaScript de forma assíncrona -->
+</head>
+<body>
+    <div class="background">
+        <div class="calculator">
+            <h2>Calculadora</i></h2> <!-- adiciona um título para a calculadora -->
+            <p id="result"></p> <!-- adiciona um espaço para exibir o resultado da operação -->
+                <table>                 
+                    <tr>
+                        <td><button class="button" onclick="clean()">C</td> <!-- adiciona um botão para limpar o resultado -->
+                        <td><button class="button" onclick="insert('**')">^</td> <!-- adiciona um botão para elevar o número à potência -->
+                        <td><button class="button" onclick="insert('/')">/</button></td> <!-- adiciona um botão para divisão -->
+                        <td><button class="button" onclick="insert('*')">*</button></td> <!-- adiciona um botão para multiplicação -->
+                    </tr>
+                    <tr>
+                        <td><button class="button" onclick="insert('7')">7</button></td> <!-- adiciona um botão para o número 7 -->
+                        <td><button class="button" onclick="insert('8')">8</button></td> <!-- adiciona um botão para o número 8 -->
+                        <td><button class="button" onclick="insert('9')">9</button></td> <!-- adiciona um botão para o número 9 -->
+                        <td><button class="button" onclick="insert('-')">-</button></td> <!-- adiciona um botão para subtração -->
+                    </tr>
+                    <tr>
+                        <td><button class="button" onclick="insert('4')">4</button></td> <!-- adiciona um botão para o número 4 -->
+                        <td><button class="button" onclick="insert('5')">5</button></td> <!-- adiciona um botão para o número 5 -->
+                        <td><button class="button" onclick="insert('6')">6</button></td> <!-- adiciona um botão para o número 6 -->
+                        <td><button class="button" onclick="insert('+')">+</button></td> <!-- adiciona um botão para adição -->
+                    </tr>
+                    <tr>
+                        <td><button class="button" onclick="insert('1')">1</button></td> <!-- adiciona um botão para o número 1 -->
+                        <td><button class="button" onclick="insert('2')">2</button></td> <!-- adiciona um botão para o número 2 -->
+                        <td><button class="button" onclick="insert('3')">3</button></td> <!-- adiciona um botão para o número 3 -->
+                        <td rowspan="2"><button class="button" style="height: 106px;" onclick="calculate()">=</button></td> <!-- chama a função de calcular -->
+                    <tr>
+                        <td colspan="2"><button class="button" style="width: 106px;" onclick="insert('0')">0</button></td> <!-- adiciona um botão para o número 0 -->
+                        <td><button class="button" onclick="insert('.')">.</button></td> <!-- adiciona um botão para o ponto flutuante -->
+                    </tr>
+                </table>
+        </div>
+    </div>
+</body>
+</html>
